@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#132146" />
+  <meta name="robots" content="noindex" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="/favicon.ico" />
+
+  {{#if htmlWebpackPlugin.options.googleTag}}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{htmlWebpackPlugin.options.googleTag}}">
+    </script>
+
+    <script>
+      if (!window.dataLayer) {
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', '{{htmlWebpackPlugin.options.googleTag}}');
+      }
+    </script>
+  {{/if}}
+
+  {{#if htmlWebpackPlugin.options.facebookPixel}}
+    <script async src="https://connect.facebook.net/en_US/fbevents.js">
+    </script>
+
+    <script>
+      if (!window.fbq) {
+        fbq = window.fbq = function() {
+          fbq.callMethod ? fbq.callMethod.apply(fbq, arguments) : fbq.queue.push(arguments);
+        };
+        if (!window._fbq) window._fbq = fbq;
+
+        fbq.push = fbq;
+        fbq.loaded = true;
+        fbq.version = '2.0';
+        fbq.queue = [];
+
+        fbq('init', '{{htmlWebpackPlugin.options.facebookPixel}}');
+      }
+    </script>
+  {{/if}}
+
+  {{#if htmlWebpackPlugin.options.yandexPixel}}
+    <script async src="https://mc.yandex.ru/metrika/tag.js">
+    </script>
+
+    <script>
+      if (!window.ym) {
+        window.ym = window.ym || function() {
+          (window.ym.a = window.ym.a || []).push(arguments);
+        };
+
+        window.ym.l = 1 * new Date();
+        ym({{htmlWebpackPlugin.options.yandexPixel}}, 'init', {
+          clickmap: true,
+          trackLinks: true,
+          accurateTrackBounce: true,
+          webvisor: true,
+        });
+      }
+    </script>
+  {{/if}}
+
+  {{#if htmlWebpackPlugin.options.pinterestTag}}
+    <script async src="https://s.pinimg.com/ct/core.js">
+    </script>
+
+    <script>
+      if (!window.pintrk) {
+        window.pintrk = function() {
+          window.pintrk.queue.push(Array.prototype.slice.call(arguments));
+        };
+        var n = window.pintrk;
+        n.queue = [];
+        n.version = '3.0';
+      }
+      pintrk('load', '{{htmlWebpackPlugin.options.pinterestTag}}');
+      pintrk('page');
+    </script>
+  {{/if}}
+
+  <title>Beglarian Fabrics</title>
+</head>
+<body>
+<noscript>
+  You need to enable JavaScript to run this app.
+</noscript>
+
+<div id="root"></div>
+
+{{#if htmlWebpackPlugin.options.facebookPixel}}
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id={{htmlWebpackPlugin.options.facebookPixel}}
+    &ev=PageView&noscript=1"/>
+  </noscript>
+{{/if}}
+
+{{#if htmlWebpackPlugin.options.yandexPixel}}
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/{{htmlWebpackPlugin.options.yandexPixel}}"
+              style="position:absolute; left:-9999px;" alt="" />
+    </div>
+  </noscript>
+{{/if}}
+
+{{#if htmlWebpackPlugin.options.pinterestTag}}
+  <noscript>
+    <img height="1" width="1" style="display:none;" alt=""
+         src="https://ct.pinterest.com/v3/?event=init&tid={{htmlWebpackPlugin.options.pinterestTag}}&noscript=1" />
+  </noscript>
+{{/if}}
+</body>
+</html>

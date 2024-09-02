@@ -110,6 +110,7 @@ export const setup = createAsyncThunk('authSlice/setup', async ({ password, setu
 
         error => Promise.reject(error),
       );
+      window.location.assign(`${process.env.PUBLIC_PATH}${locale}/${process.env.DEFAULT_PAGE}`);
     }
 
     return response;

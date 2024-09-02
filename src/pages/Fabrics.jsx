@@ -46,6 +46,8 @@ function Fabrics() {
     fabricChangedInfo,
   } = useSelector(state => state.fabricsPage);
 
+  console.log(sorts, 'sorts')
+
   const {
     data: { isLoggedIn, reservationTimeoutInMinutes },
   } = useSelector(state => state.user);

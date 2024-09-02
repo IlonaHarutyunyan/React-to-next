@@ -1,6 +1,6 @@
 export default {
-  co2disclaimer: `Thanks to this order, you will save <strong>{{ co2 }}\xa0kg</strong> of CO2 emissions, <strong>{{ ch4 }}\xa0kg</strong> of CH4 emissions, and <strong>{{ water }}\xa0liters</strong> of water`,
-  co2disclaimerShort: `Thanks to this order, you will save <strong>{{ co2 }}\xa0kg</strong> of CO2 emissions and <strong>{{ water }}\xa0liters</strong> of water`,
+  co2disclaimer: `Thanks to this order, you will save <strong>{{ co2 }kg</strong> of CO2 emissions, <strong>{{ ch4 }}\xa0kg</strong> of CH4 emissions, and <strong>{{ water }}\xa0liters</strong> of water`,
+  co2disclaimerShort: `Thanks to this order, you will save <strong>{{ co2 }}kg</strong> of CO2 emissions and <strong>{{ water }}\xa0liters</strong> of water`,
   placeholder: {
     title: 'Your cart is empty',
     text: 'Take your time and explore our catalog to find the right fabric for you.',

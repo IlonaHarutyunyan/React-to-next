@@ -43,7 +43,7 @@ export const removePromo = createAsyncThunk('cart/removePromo', async (_arg, thu
 
   thunkAPI.dispatch(udpateCart({ count, sum }));
 
-  // track(events.cartPage.сartItem.delete);
+  track(events.cartPage.сartItem.delete);
 
   return response;
 });
@@ -307,7 +307,7 @@ export const cartSlice = createSlice({
       state.promoCodeError = action.payload.msg;
     });
 
-    // removePromo
+    // c
     builder.addCase(removePromo.pending, state => {
       state.isLoading = true;
     });
